@@ -1,0 +1,109 @@
+body{
+    background-image: url('wooden-1.jpg');
+}
+.head {
+    text-align : center ;
+    font-style : italic;
+}
+.mainbox
+{   
+    display : flex;
+}
+
+
+.images
+{   
+    margin-top : 50px;
+    margin-left : 30px;
+    width : 950px;
+    height : 368px;
+    border-style:  solid;
+    border-radius: 10px;
+    background-image : url('fingermail.jpg');
+}
+.login
+{
+    margin-left : 20px;
+    width: 372px;
+    height : 568px;
+    border-style: solid;
+    border-radius: 10px;
+    background-image: url('cube.jpg');
+}
+.inp{
+    margin-left : 15px;
+    margin-top : 50px;
+    }
+.button1{
+    display: block;
+    width: 50%;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-left : 80px;
+    margin-top : 30px;
+}
+.button2{
+    margin-left : 80px;
+    margin-top : 30px;
+    width : 50%;
+}
+.divider1
+{
+    border-top: 3px solid #bbb;
+}
+.btn:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.chat
+{
+    
+    margin-left : 20px;
+    width: 372px;
+    height : 568px;
+    background-image: url('cube.jpg');
+    overflow : auto;
+    border-radius: 10px;
+}
+
+.inputs{
+    margin-left : 15px;
+    margin-top : 50px;
+
+}
+.button{
+    display: block;
+    width: 50%;
+    border: none;
+    background-color: #a8af4c;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-left : 80px;
+    margin-top : 30px;
+}
+.div3{margin-left : 20px;
+    width: 372px;
+    height : 568px;
+    background-image: url('cube.jpg');
+
+}
+.inpYourName
+{
+    margin-left : 15px;
+    margin-top : 50px;
+}
+
+.button3
+{
+    margin-left : 110px;
+    margin-top : 30px;
+}
+

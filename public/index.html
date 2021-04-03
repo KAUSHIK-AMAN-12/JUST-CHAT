@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="buttons.css">
+  <script src="jquery-3.5.1.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+
+
+  <!-- CSS only -->
+  <!--<link href="bootstrap.css" rel="stylesheet">
+    JavaScript Bundle with Popper 
+    <script src="boot.js"></script>-->
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark text-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JUSTCHAT!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Create new Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About-us</a>
+            </li>
+          </ul>
+
+        </div>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+    <!--self written code-->
+    <div class="mainbox">
+      <div class="images"></div>
+
+      <div id="loginBox" class="login">
+        <input id="inpUserName" class="inp" style="height:40px;" size=40 placeholder="enter your Username">
+        <br>
+        <input id="inpPassword" class="inp" style="height:40px;" size=40 placeholder="enter your password"
+          type="password">
+        <br>
+        <button id="btnStart" class="button1 btn btn-primary">Start</button>
+        <br>
+        <hr class="divider1">
+        <button id="btnForget" class="button2 btn btn-danger">Forget password ?</button>
+      </div>
+
+      <div id="chatBox" class="chat">
+        <input id="inpToUser" class="inputs" style="height:40px;" size=40 placeholder="default everyone">
+        <br>
+        <input id="inpNewMsg" class="inputs" style="height:40px;" size=40 placeholder="type your here">
+        <br>
+        <button id="btnSendMsg" class="button">PING</button>
+
+        <ul id="ulMsgList"> </ul>
+
+      </div>
+
+      <div id="forgetPassword" class="div3">
+        <input id="inpYourID" class="inpYourName" style="height:40px;" size=40 placeholder="input your name">
+        <br>
+        <button id="btnEnterPass" class="button3 btn btn-info">Get Pass !</button>
+        <br>
+        <ul id="ulMsgList1" class="ulpart2"></ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
