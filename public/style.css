@@ -1,5 +1,7 @@
 body{
-    background-image: url('wooden-1.jpg');
+    background-image: url('tree-2.jpg');
+    width : 100%;
+    
 }
 .head {
     text-align : center ;
@@ -19,20 +21,24 @@ body{
     height : 368px;
     border-style:  solid;
     border-radius: 10px;
-    background-image : url('fingermail.jpg');
+    background-image : url('networks-3017395_1280.jpg');
+    box-shadow : gray 4px 4px 4px;
 }
 .login
 {
     margin-left : 20px;
+    margin-top: 20px;
     width: 372px;
     height : 568px;
     border-style: solid;
     border-radius: 10px;
-    background-image: url('cube.jpg');
+    /*background-image: url('cube.jpg');*/
+    background-color: rgba(255,255,255,0.9);
+
 }
 .inp{
     margin-left : 15px;
-    margin-top : 50px;
+    margin-top : 10px;
     }
 .button1{
     display: block;
@@ -62,25 +68,26 @@ body{
   }
 .chat
 {
-    
+    margin-top: 20px;
     margin-left : 20px;
     width: 372px;
     height : 568px;
-    background-image: url('cube.jpg');
+    background-color: rgba(0,255,0,0.2);
     overflow : auto;
     border-radius: 10px;
+    border : solid;
 }
 
 .inputs{
     margin-left : 15px;
-    margin-top : 50px;
+    margin-top : 5px;
 
 }
 .button{
     display: block;
     width: 50%;
-    border: none;
-    background-color: #a8af4c;
+    border-radius: 10px;
+    background-color: rgb(240,191,255);
     color: white;
     padding: 14px 28px;
     font-size: 16px;
@@ -88,17 +95,21 @@ body{
     text-align: center;
     margin-left : 80px;
     margin-top : 30px;
+    box-shadow : gainsboro 3px 3px 3px;
 }
 .div3{margin-left : 20px;
     width: 372px;
     height : 568px;
-    background-image: url('cube.jpg');
+    background-color: rgba(255,255,255,0.9);
+    border : solid;
+    margin-top : 20px;
+    border-radius : 10px;
 
 }
 .inpYourName
 {
     margin-left : 15px;
-    margin-top : 50px;
+    margin-top : 20px;
 }
 
 .button3
