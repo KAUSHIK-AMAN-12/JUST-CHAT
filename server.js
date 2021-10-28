@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const server = http.createServer(app)                         //yaha app ko server me badla
 const io = socketio(server)
+const PORT = process.env.PORT || 4444
 
 app.use('/',express.static(__dirname+'/public'))
 
@@ -97,5 +98,5 @@ socket.emit('usercreated')
 
 server.listen(4444, ()=>
 {
-    console.log('http://localhost:4444')
+    console.log(`http://localhost:${PORT}`)
 })
