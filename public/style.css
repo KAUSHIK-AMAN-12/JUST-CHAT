@@ -1,46 +1,91 @@
-body{
-    background-image: url('tree-2.jpg');
-    width : 100%;
-    
+*,*::after , *::before{
+    box-sizing: border-box;
+    font-family: 'Quicksand' , sans-serif;
 }
-.head {
-    text-align : center ;
-    font-style : italic;
+body {
+    margin : 0;
 }
-.mainbox
-{   
-    display : flex;
+   
+.full-screen-container{
+    background-image: url("./images/mourizal-zativa-PNUoryUKi5g-unsplash.jpg");
+    height : 100vh;
+    width : 100vw ;
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* backdrop-filter: blur(20px); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.login-title{
+    color : white ;
+    text-align: center;
+    margin : 0;
+    margin-bottom : 2px;
+    font-size : 2.5em ; 
+    font-weight: normal;
 }
 
-
-.images
-{   
-    margin-top : 50px;
-    margin-left : 30px;
-    width : 950px;
-    height : 368px;
-    border-style:  solid;
-    border-radius: 10px;
-    background-image : url('networks-3017395_1280.jpg');
-    box-shadow : gray 4px 4px 4px;
-}
 .login
 {
-    margin-left : 20px;
-    margin-top: 20px;
-    width: 372px;
-    height : 568px;
-    border-style: solid;
+    background-color : hsla(0, 100%, 0%, 0.9);
+    padding : 10px 50px;
+    min-width : 400px;
+    width : 50%;
+    max-width: 600px;
     border-radius: 10px;
     /*background-image: url('cube.jpg');*/
-    background-color: rgba(255,255,255,0.9);
 
 }
-.inp{
-    margin-left : 15px;
-    margin-top : 10px;
-    }
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding-top : 0px;
+    padding-bottom: 0px;  
+}
+.input-group label
+{
+    color : white;
+    font-weight: lighter ;
+    font-size: 1.5em;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+.input-group input{
+/* first going to remove default styles */
+font-size: 1.5em ;
+padding : 0.1em .25em;
+background-color : hsla(201, 100%, 91%, 0.3) ; 
+border : 1px solid hsl(201,100%,8%) ; 
+border-radius: 4px;
+outline : none ; 
+color : white;
+font-weight: bold;
+margin-top: 0px;
+}
+
+
 .button1{
+    /* padding for button size */
+    padding : 2px 30px;
+    width: 100%;
+    border-radius: 4px;
+    background-color : hsla(201,100% , 50%  ,0.1);
+    border : 1px solid hsl(201,100% , 50%);
+    outline : none;
+    font-size: 1.5em;
+    color : white;
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor : pointer;
+}
+
+/* .button1{
     display: block;
     width: 50%;
     border: none;
@@ -52,11 +97,25 @@ body{
     text-align: center;
     margin-left : 80px;
     margin-top : 30px;
-}
+} */
 .button2{
-    margin-left : 80px;
-    margin-top : 30px;
-    width : 50%;
+    padding : 1px 30px;
+    width: 100%;
+    border-radius: 4px;
+    background-color : hsla(201,100% , 50%  ,0.1);
+    border : 1px solid hsl(201,100% , 50%);
+    outline : none;
+    font-size: 1.5em;
+    color : white;
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor : pointer;
+}
+.button1:hover{
+    background-color: hsla(24, 100%, 50% );
+}
+.button2:hover{
+    background-color: rgb(248, 0, 0);
 }
 .divider1
 {
@@ -68,53 +127,110 @@ body{
   }
 .chat
 {
-    margin-top: 20px;
-    margin-left : 20px;
-    width: 372px;
-    height : 568px;
-    background-color: rgba(0,255,0,0.2);
-    overflow : auto;
+    background-color : hsla(0, 100%, 0%, 0.9);
+    padding : 20px 50px;
+    min-width : 400px;
+    width : 50%;
+    max-width: 600px;
+    max-height: 80%;
     border-radius: 10px;
-    border : solid;
 }
 
-.inputs{
-    margin-left : 15px;
-    margin-top : 5px;
-
+.input-group-chat{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding-top : 0px;
+    padding-bottom: 0px;  
 }
-.button{
-    display: block;
-    width: 50%;
-    border-radius: 10px;
-    background-color: rgb(240,191,255);
-    color: white;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
+
+.input-group-chat input{
+    font-size: 1.5em ;
+    padding : 0.1em .25em;
+    background-color : hsla(201, 100%, 91%, 0.3) ; 
+    border : 1px solid hsl(201,100%,8%) ; 
+    border-radius: 4px;
+    outline : none ; 
+    color : white;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.input-group-chat label{
+    color : white;
+    font-weight: lighter ;
+    font-size: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 0px;
     text-align: center;
-    margin-left : 80px;
-    margin-top : 30px;
-    box-shadow : gainsboro 3px 3px 3px;
 }
-.div3{margin-left : 20px;
-    width: 372px;
-    height : 568px;
+
+.button{
+    padding : 2px 30px;
+    width: 100%;
+    border-radius: 4px;
+    background-color : hsla(201,100% , 50%  ,0.1);
+    border : 1px solid hsl(201,100% , 50%);
+    outline : none;
+    font-size: 1.5em;
+    color : white;
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor : pointer;
+}
+
+.message-div{
+    height: 90%;
+    width : 30%;
     background-color: rgba(255,255,255,0.9);
-    border : solid;
-    margin-top : 20px;
-    border-radius : 10px;
-
+    border : 2px solid black;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: black 5px 5px 10px;
+    word-wrap: break-word;
 }
-.inpYourName
-{
-    margin-left : 15px;
-    margin-top : 20px;
+.message-div h5{
+   font-size : 1.5em;
+   font-weight: bold;
+   text-align: center;
+   color : black;
+   margin-top:3px;
 }
 
-.button3
+
+/*-------------------- Forgot password -------------------------*/
+.div3{
+    background-color : hsla(0, 100%, 0%, 0.9);
+    padding : 30px 50px;
+    min-width : 400px;
+    width : 50%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.div3 input{
+    font-size: 1.5em ;
+    padding : 0.1em .25em;
+    background-color : hsla(201, 100%, 91%, 0.3) ; 
+    border : 1px solid hsl(201,100%,8%) ; 
+    border-radius: 4px;
+    outline : none ; 
+    color : white;
+    font-weight: lighter;
+    margin-top: 0px;
+}
+
+.getpassbtn
 {
-    margin-left : 110px;
-    margin-top : 30px;
+    padding : 8px 30px;
+    width: 100%;
+    border-radius: 4px;
+    background-color : hsla(201,100% , 50%  ,0.1);
+    border : 1px solid hsl(201,100% , 50%);
+    outline : none;
+    font-size: 1.5em;
+    color : white;
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor : pointer;
 }
 

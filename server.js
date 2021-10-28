@@ -2,35 +2,39 @@ const http = require('http')
 const socketio = require('socket.io')
 const express = require('express')
 const app = express()
-const server = http.createServer(app)//yaha app ko server me badla
+const server = http.createServer(app)                         //yaha app ko server me badla
 const io = socketio(server)
 
 app.use('/',express.static(__dirname+'/public'))
 
-let users = {            //phle se passwrod save karne ka array
-    'aman' : 'aman29',         //objects ka array hai
+let users = {                                           
+    'aman' : 'aman29',                                   
     'ishu' : 'ishu02',
     'ujjawal' : 'ujj26',
     'yash' : 'yash12'
 }
-let socketMap = {}
+ 
+let socketMap = {}                 //-> {'akjsbcaksjcbask' : 'aman'}
 
-io.on('connection',(socket)=> //connection is an event here and then socket will give the response
+io.on('connection',(socket)=>    //connection is an event here and then socket will give the response
 {
-    function login(s,u)  //ye function banadiya bas ab join karne ka
+    function login(s,u)                          //ye function to join the room here
     {
-        s.join(u)   //yaha socket aur username se judjaye
+        s.join(u)                        //yaha socket aur username se judjaye
         s.emit('logged_in')
         socketMap[s.id] = u     //here id is the socket id of the user or uss id ke correspond nam save kaediya
         console.log(socketMap)  //yaha ye socket id ke sath uske user ka naam print karega
     }
-      socket.on('login', (data)=>
+
+
+    socket.on('login', (data)=>
      {   
-     if(users[data.username]) //if data.username existin users array
+     if(users[data.username])                   //if "data.username" exist in users array
      {
      if(users[data.username] == data.password)  //yaha password sahi hai ya nhi ye check kar rahe hai 
      {
-        login(socket,data.username)    //socket.join(data.username)  //data.username wale name se
+        login(socket,data.username)    //socket.join(data.username) 
+                                       //after login we need to attach socket id to username
                                                //socket.emit('logged_in')
      }
      else
@@ -39,24 +43,32 @@ io.on('connection',(socket)=> //connection is an event here and then socket will
      }}
      else
      {
-      users[data.username] = data.password  //user ka naam add karke users me fir join karadiya
-      login(socket,data.username)  // socket.join(data.username)  //data.username wale name se
+    //   users[data.username] = data.password      //user ka naam add karke users me fir join karadiya
+    //   login(socket,data.username)        // socket.join(data.username)  
                                            // socket.emit('logged_in')
+        socket.emit('login_failed')                                   
      }
      console.log(users)
      
  })
 
+socket.on('signup' , (data) =>
+{
+users[data.username] = data.password             //new user created  
+socket.emit('usercreated')
+})
+
     socket.on('msg_send', (data) =>
     {
-     data.from = socketMap[socket.id]  //socketid ke correspond hume user ka pata lagana hai
+     data.from = socketMap[socket.id]         //socketid ke correspond hume user ka pata lagana hai
      if(data.to)  //data.to is like a room here and if data.to = aman ,then msg will go to aman room
      {
-
-      socket.to(data.to).emit('msg_rcvd',data)    //ye event ab data.to ke room pe chale jayue
+        io.in(data.to).emit('msg_rcvd', data);
+      //socket.to(data.to).emit('msg_rcvd',data)    //ye event ab data.to ke room pe chale jayue
      }
      else{
-         socket.broadcast.emit('msg_rcvd', data)  // ye default hi sab ko send kardega
+        // socket.broadcast.emit('msg_rcvd', data)          // ye default hi sab ko send kardega
+        io.emit('msg_rcvd', data) 
      }
  })
 

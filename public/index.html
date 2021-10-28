@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOME PAGE!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:100,300,500">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
 
@@ -27,78 +28,68 @@
 </head>
 
 <body>
-  <div class="conatiner-xxl">
-    <nav class="navbar navbar-expand-lg navbar-dark text-light" style="background-color: rgb(255,69,0);">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">JUSTCHAT!</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Create new Account</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About-us</a>
-            </li>
-          </ul>
-
-        </div>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+  <div class="full-screen-container">
+<!-- USER SIGNUP DIV -->
+    <div id="signupBox" class="login">
+      <h3 class="login-title">Welcome to SignUP</h3>
+      <div class="input-group">
+        <label>USERNAME :</label>
+      <input id="newusername" class="inp" placeholder="enter your Username"></div>
+      <div class="input-group">
+        <label>PASSWORD :</label>
+        <input id="newuserpass" class="inp" placeholder="enter your password" type="password">
       </div>
-    </nav>
+      <button id="btncreateuser" class="button1">Sign Up</button>
+    </div>
 
-
-    <!--self written code-->
-    <div class="mainbox">
-      <div class="images"></div>
-
+  <!-- LOGIN DIV -->
       <div id="loginBox" class="login">
-        <label style="padding-left:  20px; padding-top: 50px;">USERNAME :</label><br>
-        <input id="inpUserName" class="inp" style="height:40px;" size=38 placeholder="enter your Username">
-        <br>
-        <label style="padding-left:  20px; padding-top: 50px;">PASSWORD :</label><br>
-        <input id="inpPassword" class="inp" style="height:40px;" size=38 placeholder="enter your password"
-          type="password">
-        <br>
-        <button id="btnStart" class="button1 btn btn-primary">Start</button>
-        <br>
-        <hr class="divider1">
-        <button id="btnForget" class="button2 btn btn-danger">Forget password ?</button>
+        <h3 class="login-title">Welcome to Log In</h3>
+        <hr style="background-color : white; width : 60%">
+        <div class="input-group">
+          <label>USERNAME :</label>
+        <input id="inpUserName" class="inp" placeholder="enter your Username"></div>
+        <div class="input-group">
+          <label>PASSWORD :</label>
+          <input id="inpPassword" class="inp" placeholder="enter your password" type="password">
+        </div>
+        <button id="btnStart" class="button1">Start</button>
+        <button id="btnForget" class="button1">Forget password ?</button>
+        <button id="btnsignuppage" class="button1">New User, SignUp here ?</button>
       </div>
-
+<!-----------------------   CHATBOX          ------------------->
       <div id="chatBox" class="chat">
-        <label style="padding-left:  20px; padding-top: 50px;">TO :</label><br>
-        <input id="inpToUser" class="inputs" style="height:40px;" size=36 placeholder="default everyone">
-        <br>
-        <label style="padding-left:  20px; padding-top: 50px;">TYPE YOUR MSG :</label><br>
-        <input id="inpNewMsg" class="inputs" style="height:40px;" size=36 placeholder="type your here">
-        <br>
+        <div class="input-group-chat">
+        <label>TO :</label>
+        <input id="inpToUser" class="input" placeholder="default everyone">
+        </div>
+        <div class="input-group-chat">
+        <label>TYPE YOUR MSG :</label>
+        <input id="inpNewMsg" class="input" placeholder="type your here">
+        </div>
         <button id="btnSendMsg" class="button">SEND!</button>
-        <hr class="divider1">
+        <button id="logoutbtn" class="button">Logout!</button>
+        <!-- <div class="message-div" id="chatdiv">
         <ul id="ulMsgList"> </ul>
-
+        </div> -->
       </div>
 
+      <div class="message-div"   id="chatdiv">
+        <h5>Inbox</h5>
+        <hr style="background-color : black;">
+        <ul id="ulMsgList"> </ul>
+        </div>
+
+
+      <!--      forget password  -->
       <div id="forgetPassword" class="div3">
-        <label style="padding-left:  20px; padding-top: 50px;">USERNAME:</label><br>
-        <input id="inpYourID" class="inpYourName" style="height:40px;" size=40 placeholder="input your name">
-        <br>
-        <button id="btnEnterPass" class="button3 btn btn-info">Get Pass !</button>
-        <br>
+        <div class="input-group">
+        <label>USERNAME:</label>
+        <input id="inpYourID" placeholder="input your name">
+        <button id="btnEnterPass" class="getpassbtn">Get Pass !</button>  
+        </div>
         <ul id="ulMsgList1" class="ulpart2"></ul>
+        <button id="loginpagebtn" class="button">Login</button>
       </div>
 
     </div>
