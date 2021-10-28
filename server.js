@@ -10,9 +10,7 @@ app.use('/',express.static(__dirname+'/public'))
 
 let users = {                                           
     'aman' : 'aman29',                                   
-    'ishu' : 'ishu02',
-    'ujjawal' : 'ujj26',
-    'yash' : 'yash12'
+    'ishu' : 'ishu02'
 }
  
 let socketMap = {}                 //-> {'akjsbcaksjcbask' : 'aman'}
