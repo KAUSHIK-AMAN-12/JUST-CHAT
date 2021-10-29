@@ -53,8 +53,15 @@ io.on('connection',(socket)=>    //connection is an event here and then socket w
 
 socket.on('signup' , (data) =>
 {
-users[data.username] = data.password             //new user created  
-socket.emit('usercreated')
+    if(!data)
+    {
+       socket.emit('login_failed')
+    }
+    else{
+        users[data.username] = data.password             //new user created  
+        socket.emit('usercreated')
+    }
+    
 })
 
     socket.on('msg_send', (data) =>
